@@ -1,1 +1,280 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOSES COLLECTIONS | Premium Men's Wear</title>
+    <style>
+        /* --- Global Reset & Fonts --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        /* --- Landing Screen (Intro) --- */
+        #intro-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1490578474895-699bc4e2cf59?auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: #ffffff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #intro-screen h1 {
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        #intro-screen p {
+            margin-bottom: 25px;
+            color: #ddd;
+        }
+
+        .intro-form {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 8px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            outline: none;
+        }
+
+        .enter-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: #d4af37; /* Gold tone */
+            color: #111;
+            font-weight: bold;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .enter-btn:hover {
+            background-color: #f3c63f;
+        }
+
+        /* --- Main Website Content (Hidden by default) --- */
+        #main-website {
+            display: none;
+        }
+
+        header {
+            background-color: #111;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        header h2 {
+            letter-spacing: 2px;
+            color: #d4af37;
+        }
+
+        .welcome-banner {
+            background-color: #e2e2e2;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .about-section {
+            background: #fff;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .about-section h3 {
+            margin-bottom: 10px;
+            color: #111;
+        }
+
+        /* --- Product Gallery Grid --- */
+        .gallery-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.2s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .product-card h4 {
+            margin: 15px 0 5px;
+        }
+
+        .product-card p {
+            color: #666;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #111;
+            color: #777;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="intro-screen">
+        <h1>MOSES COLLECTIONS</h1>
+        <p>Dealers in all types of men's wear and accessories</p>
+
+        <form class="intro-form" onsubmit="enterWebsite(event)">
+            <div class="input-group">
+                <label for="userName">Full Name</label>
+                <input type="text" id="userName" placeholder="Enter your name" required>
+            </div>
+            <div class="input-group">
+                <label for="userResidence">Place of Residence</label>
+                <input type="text" id="userResidence" placeholder="Enter city/town" required>
+            </div>
+            <button type="submit" class="enter-btn">ENTER WEBSITE</button>
+        </form>
+    </div>
+
+    <div id="main-website">
+        <header>
+            <h2>MOSES COLLECTIONS</h2>
+        </header>
+
+        <div class="welcome-banner" id="greetingMessage">
+            </div>
+
+        <div class="container">
+            <section class="about-section">
+                <h3>About MOSES COLLECTIONS</h3>
+                <p>Welcome to MOSES COLLECTIONS, your premier destination for high-quality men's fashion. We specialize in fitting modern men with top-grade t-shirts, tailored shorts, stylish shoes, and comfortable slippers. Our mission is to elevate your everyday style with durable, trendy wear for every occasion.</p>
+            </section>
+
+            <h3 class="gallery-title">Our Featured Collection</h3>
+            <div class="product-grid">
+                
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=500&q=80" alt="Men T-Shirt">
+                    <h4>Casual T-Shirts</h4>
+                    <p>Premium Cotton Wear</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=500&q=80" alt="Men Shorts">
+                    <h4>Tailored Shorts</h4>
+                    <p>Smart & Comfortable</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=500&q=80" alt="Men Shoes">
+                    <h4>Classic Shoes</h4>
+                    <p>Formal & Casual Footwear</p>
+                </div>
+
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1603808033192-082d6919d3e1?auto=format&fit=crop&w=500&q=80" alt="Men Slippers">
+                    <h4>Designer Slippers</h4>
+                    <p>Relaxed Footwear</p>
+                </div>
+
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 MOSES COLLECTIONS. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <script>
+        function enterWebsite(event) {
+            // Prevent form from refreshing page
+            event.preventDefault();
+
+            // Get user input values
+            const name = document.getElementById('userName').value;
+            const residence = document.getElementById('userResidence').value;
+
+            // Hide the intro page
+            document.getElementById('intro-screen').style.display = 'none';
+
+            // Show the main website
+            document.getElementById('main-website').style.display = 'block';
+
+            // Personalize the welcome text
+            document.getElementById('greetingMessage').innerText = 
+                `Welcome, ${name} from ${residence}! Explore our exclusive collection below.`;
+        }
+    </script>
+</body>
+</html>
